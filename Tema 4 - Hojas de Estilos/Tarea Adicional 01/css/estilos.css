@@ -1,0 +1,84 @@
+@import url(normalize.css);
+
+/* Base */
+ *{
+     font-family: 'Courier New', Courier, monospace;
+ }
+
+ h1, h2, h3, h4, h5, h6{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ h2{
+     font-size: 1rem;
+ }
+ 
+ p, ul{
+     font-size: 0.8rem;
+ }
+
+ nav ul{
+     font-size: 1.5rem;
+ }
+
+a{
+    color: #000000;
+}
+
+a:hover{
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+nav a:hover{
+    text-decoration: none;
+    background-color: #a9a9a9;
+    color: #ffffff;
+}
+
+
+header, footer{
+    width: 100%;
+    color: #ffffff;
+    background-color: rgba(155, 155, 155, 0.733);
+    padding-left: 1rem;
+}
+
+/* Cabecera */
+
+
+
+
+/* Menú*/
+nav{
+    width: 15%;
+    float: left;
+    height: 120vh;
+    padding-right: 2rem;
+}
+
+nav ul{
+    list-style: none;
+    text-align: right;
+}
+
+
+/* Contenido */
+#content{
+    width: 80%;
+    padding: 1rem 0 0 1.5rem;
+}
+
+#left ul, #right ul{
+    list-style: circle;
+    margin-left: 20%;
+}
+
+
+
+/* Pié de página */
+footer p{
+    font-weight: bold;
+    text-align: left;
+}
