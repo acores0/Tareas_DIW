@@ -1,0 +1,28 @@
+@media print{
+    html{
+        text-align: justify;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #dte_entrenadores h1{
+        text-align: left;
+    }
+
+    img{
+        display: none;
+    }
+
+    footer #pie_izquierda{
+        text-align: center;
+    }
+
+    footer #pie_izquierda p::before{
+        content: "DIRECCIÓN";
+        font-weight: bold;
+    }
+
+    footer #pie_derecha{
+        display: none;
+    }
+
+}
