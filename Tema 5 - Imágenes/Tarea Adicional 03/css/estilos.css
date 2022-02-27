@@ -1,0 +1,305 @@
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+/*----- Base ------*/
+
+    /*------- Variables ------*/
+    :root{
+        /* Colores empleados para la fuente y fondo */
+        --color-enlaces: #dc7c1d;
+        --color-texto-pie-hover-enlaces: #fff;
+        --color-fondo-figure: #000;
+        --color-fondo-seccion-rutas: #212121;
+        --color-fondo-caminando: rgba(0,0,0,0.76);
+
+        /* Colores empleados para el fondo de los figure */
+        --color-fondo-figure-azul: #123851;
+        --color-fondo-figure-rojo: #581a14;
+        --color-fondo-figure-amarillo: #7f5006;
+        --color-fondo-figure-verde: #083616;
+        --color-fondo-figure-violeta: #2b0836;
+
+        /* Colores empleados en los h2 de las rutas */
+        --color-fondo-h2-rutas-azul: #0a212f;
+        --color-fondo-h2-rutas-rojo: #36100c;
+        --color-fondo-h2-rutas-amarillo: #583804;
+        --color-fondo-h2-rutas-verde: #083616;
+        --color-fondo-h2-rutas-violeta: #2b0836;
+    }
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: "Roboto Slab" , "Georgia", 'Times New Roman', Times, serif ;
+        color: var(--color-texto-pie-hover-enlaces);
+    }
+
+    body > div{
+        background-image: url(../imagenes/Catedral_de_santiago.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #000;
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--color-enlaces);
+        font-size: 1.1vw;
+    }
+
+
+    
+
+
+/*------ Cabecera ------*/
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 1% 0 0 2%;
+        background-color: rgb(220, 125, 29);
+        opacity: 0.6;
+    }
+
+    header h1{
+        font-size: 3vw;
+        text-align: center;
+        width: 90%;
+    }
+
+
+
+
+/*------ Contenido --------*/
+    main{
+        width: 100%;
+    }
+
+    /*------ Rutas -------*/
+        section#rutas{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            background-color: var(--color-fondo-seccion-rutas);
+            padding: 1rem 0rem;
+        }
+
+        figure.figuraruta{
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            margin: 10px;
+            max-width: 310px;
+            max-height: 220px;
+            width: 100%;
+            background-color: var(--color-fondo-figure);
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        figure.figuraruta *{
+            transition: all 0.4s ease-in-out;
+            overflow: hidden;
+        }
+
+        figure.figuraruta img{
+            max-width: 100%;
+            position: relative;
+            opacity: 0.4;
+        }
+
+        figure.figuraruta img:hover{
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        figure.figuraruta figcaption{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        figure.figuraruta h2{
+            position: absolute;
+            left: 40px;
+            right: 40px;
+            bottom: 50%;
+            background-color: #000;
+            opacity: 0.8;
+            transform: skew(-10deg) rotate(-10deg) translate(0, 50%);
+            padding: 12px 5px;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 1.5vw;
+            font-weight: 400;
+        }
+
+        figure.figuraruta:hover h2{
+            transform: skew(10deg) rotate(-10deg) translate(-150%, -50%);
+            -webkit-transform: skew(10deg) rotate(-10deg) translate(-150%, -50%);
+            -moz-transform: skew(10deg) rotate(-10deg) translate(-150%, -50%);
+            -o-transform: skew(10deg) rotate(-10deg) translate(-150%, -50%);
+        }
+
+        figure.figuraruta span{
+            font-weight: 800;
+        }
+
+        /*------- Colores de fondo de los figure y h2 ------*/
+            /*------ Fondo rojo ------*/
+                figure.rojo{
+                    background-color: var(--color-fondo-figure-rojo);
+                }
+
+                figure.rojo h2{
+                    background-color: var(--color-fondo-h2-rutas-rojo);
+                }
+            
+            /*------ Fondo verde -----*/
+                figure.verde {
+                    background-color: var(--color-fondo-figure-verde);
+                }
+
+                figure.verde h2{
+                    background-color: var(--color-fondo-h2-rutas-verde);
+                }       
+
+            /*------ Fondo azul ------*/
+                figure.azul {
+                    background-color: var(--color-fondo-figure-azul);
+                }
+
+                figure.azul h2{
+                    background-color: var(--color-fondo-h2-rutas-azul);
+                }       
+
+            /*------ Fondo amarillo ------*/
+                figure.amarillo {
+                    background-color: var(--color-fondo-figure-amarillo);
+                }
+
+                figure.amarillo h2{
+                    background-color: var(--color-fondo-h2-rutas-amarillo);
+                }       
+
+            /*------ Fondo violeta ------*/
+                figure.violeta {
+                    background-color: var(--color-fondo-figure-violeta);
+                }
+
+                figure.violeta h2{
+                    background-color: var(--color-fondo-h2-rutas-violeta);
+                }  
+                
+        /* ------ PseudoElementos -----*/
+        figure.figuraruta::before{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+            transform: rotate(110deg) translateY(-50%);
+            content: '';
+        }
+
+        figure.figuraruta:hover::before{
+            transform: rotate(110deg) translateY(-150%);
+            -webkit-transform: rotate(110deg) translateY(-150%);
+            -moz-transform: rotate(110deg) translateY(-150%);
+            -o-transform: rotate(110deg) translateY(-150%);
+        }
+
+        figure.figuraruta a{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+
+
+    /*------- Modos Camino ------*/
+        #modosCamino{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0,0,0,0.76);
+            width: 100%;
+            margin: 2% 0;
+            padding: 2rem 0;
+        }
+
+        #modosCamino h2{
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+        }
+
+        #modosCamino figure{
+            text-align: center;
+        }
+
+        
+
+        #modosCamino img{
+            width: 20vmin;
+            height: 20vmin;
+            border-radius: 100px;
+        }
+
+        #modosCamino img:hover{
+            transform: scale(1.2);
+        }
+
+        #modosCamino h3{
+            color: var(--color-enlaces);
+        }
+
+        #modosCamino h3:hover{
+            color: var(--color-texto-pie-hover-enlaces);
+            font-weight: bold;
+            transform: scale(1.1);
+        }
+
+
+
+
+/*------- Pie de página --------*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 1.1vw;
+    margin: 0;
+    padding: 1rem 0;
+
+    background-color: rgb(220, 125, 29);
+    opacity: 0.6;
+}
