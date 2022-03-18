@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+
+/*------ Estilos Generales ------*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    /*------ Variables ------*/
+    :root{
+        --color-fondo-cabecera-pie: #0a212f;
+        --color-texto-fondo: #a8c730;
+        --color-separador-p: #c2d86e;
+        --color-elemento-inactivo: rgba(128,128,128,0.493);
+        --label-checkbox: #0fbf12;
+        --label-checkbox-disabled: #ccc;
+        --label-checkbox-checked: #c1eec2;
+        --fondo-label: #48382898;
+        --color-blanco: #fff;
+        --tamano-fuente: 16px;
+    }
+
+
+
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        
+        /*font-family: 'Montserrat', sans-serif;
+        font-size: var(--tamano-fuente);
+        line-height: 1.5;*/
+        font: var(--tamano-fuente)/1.5 'Montserrat', sans-serif;
+    }
+
+    h1{
+        font-size: calc(var(--tamano-fuente) + 1rem);
+        text-align: center;
+        color: var(--color-texto-fondo);
+        margin-top: 1rem;
+    }
+
+    h2{
+        font-size: calc(var(--tamano-fuente) + 0.3rem);
+    }
+
+    h3{
+        font-size: calc(var(--tamano-fuente) + 0.1rem);
+        text-transform: uppercase;
+    }
+
+    button, #botones input[type="submit"]{
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+
+
+
+/*------ Cabecera ------*/
+    header{
+        background-color: var(--color-fondo-cabecera-pie);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    /*------ Menú ------*/
+        #menuPrincipal{
+            margin: 2rem 0;
+        }
+
+        #menuPrincipal ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        #menuPrincipal ul li{
+            margin-right: 1.5rem;
+        }
+
+        #menuPrincipal ul li a img{
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+        }
+
+        #menuPrincipal ul li a img:hover{
+            border: solid 1px var(--color-blanco);
+            border-radius: 50%;
+            padding: 2px;
+            transform: rotate(360deg); 
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+        }
+
+        /*------ Botón Contacta------*/
+        .cta-contact{
+            background-color: transparent;
+            border: none;
+            border: solid 1px var(--color-texto-fondo);
+            border-radius: 5px;
+            padding: 0.3rem 1rem;
+            color: var(--color-texto-fondo);
+        }
+
+        .cta-contact:hover{
+            background-color: var(--color-blanco);
+            color: var(--fondo-label);
+            border-color: var(--fondo-label);
+        }
+
+    .separador{
+        width: 135px;
+        margin: 1% 0;
+        background-color: var(--color-separador-p);
+    }
+
+
+
+
+/*------ Contenido ------*/
+    main{
+        flex-grow: 1;
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    div.separador{
+       height: 10px; 
+       margin: 1% auto;
+    }
+
+    form{
+        margin: 0 auto;
+    }
+
+
+    /*---------- Galería ----------*/
+        .galeria{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: left;
+            border-bottom: solid 1px var(--color-texto-fondo);
+            margin: 0.5rem 2rem;
+        }
+
+        .galeria li{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+    /*------ Contenido de cada elemento de la galería -------*/
+        .card{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            background-color: var(--color-texto-fondo);
+        }
+
+        .card > *{
+            margin: 0.3rem;
+        }
+
+        .card figure{
+            width: 100%;
+            display: block;
+        }
+
+        .card figure img{
+            width: 100%;
+            height: auto;
+            transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+        }
+
+        .card figure img:hover{
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+        }
+
+        .card h2, .card h3{
+            color: var(--color-blanco);
+            width: 100%;
+        }
+
+        p.separador{
+            height: 6px;
+            margin: auto 0.3rem;
+        }
+
+        .card a{
+            color: var(--fondo-label);
+            width: 100%;
+        }
+
+        .votar{
+            background-color: var(--fondo-label);
+            width: 100%;
+            margin: 0;
+            align-self: end;
+        }
+
+        .votar label{
+            color: var(--color-texto-fondo);
+            font-weight: bold;
+            width: 100%;
+            padding: 0.5rem 0.3rem; 
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        /*------ Checkbox ------*/
+            /*------ Desaparecer input -------*/
+            .votar input[type="checkbox"]{
+                display: none;
+            }
+
+            /*------ Crear cuadrado input -------*/
+            .votar input[type="checkbox"] + label::before{
+                content: "";
+                width: 16px;
+                height: 16px;
+                float: left;
+                border: solid 2px var(--label-checkbox-disabled);
+                background-color: var(--color-blanco);
+                margin-right: 80%;
+            }
+
+            .votar input[type="checkbox"]:checked + label::before{
+                border-color: var(--label-checkbox);
+                margin-right: 80%;
+            }
+
+            /*------ Crear check ------*/
+            .votar input[type="checkbox"]:checked + label::after{
+                content: "";
+                width: 12px;
+                height: 6px;
+                border: solid 4px var(--label-checkbox);
+                
+                float: left;
+                margin-left: -85%;
+                border-right: 0;
+                border-top: 0;
+                margin-top: 0.2em;
+                transform: rotate(-55deg);
+                -webkit-transform: rotate(-55deg);
+                -moz-transform: rotate(-55deg);
+                -o-transform: rotate(-55deg);
+            }
+
+        .votar input[type="checkbox"]:checked + label{
+            background-color: var(--label-checkbox-checked);
+        }
+
+    /*------ Card inactivo ------*/
+    .inactivo{
+        background-color: var(--color-elemento-inactivo);
+    }
+
+    .inactivo figure img{
+        transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -webkit-transition: none;
+    }
+
+    .inactivo figure img:hover{
+        transition: none;   
+        -moz-transition: none;
+        -o-transition: none;
+        -webkit-transition: none;
+        transform: none;
+        -moz-transform: none;
+        -o-transform: none;
+        -webkit-transform: none;
+     
+    }
+
+    /*https://developer.mozilla.org/es/docs/Web/CSS/cursor*/
+    input[type="checkbox"]:disabled + label{
+        cursor: not-allowed;
+    }
+
+            
+
+    
+    /*------ Botón Submit------*/
+    #botones{
+        margin-top: 0.3rem;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    #botones input{
+        padding: 0.3rem 1rem;
+        box-shadow: 4px 4px 5px var(--color-fondo-cabecera-pie);
+        color: var(--color-texto-fondo);
+        background-color: var(--color-fondo-cabecera-pie);
+        border: none;
+        border: solid 1px var(--color-fondo-cabecera-pie);
+        border-radius: 5px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    #botones input:hover{
+        background-color: var(--color-texto-fondo);
+        color: var(--color-fondo-cabecera-pie);
+        border-color: var(--color-texto-fondo);
+    }
+        
+    
+        
+/*------ Pié de Página ------*/
+footer{
+    background-color: var(--color-fondo-cabecera-pie);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-blanco);
+    padding: 1rem;
+}
+
+footer div{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 50%;
+}
+
+footer div h2{
+    color: var(--color-texto-fondo);
+}
+
+footer div p{
+    margin: 10px 10px 0 0;
+}
+
+
+    /*------ Izquierda ------*/
+    footer .izquierda{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+/*        border-right: dotted 1px var(--color-texto-fondo);*/
+    }
+
+    footer .izquierda figure img{
+        width: auto;
+    }
+
+
+    /*------ Derecha -------*/
+    footer .derecha {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /*padding-left: 1.5rem;*/
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+/*---------- Diseño responsive ----------*/
+
+/*------ Pantallas desde 550px ------*/
+    @media screen and (min-width: 550px){
+        /*------ Contenido -------*/
+
+            .galeria li{
+                width: 45%;
+                margin-right: 1.5rem;
+            }
+           
+
+            /*------ Input Checkbox -------*/
+            .votar input[type="checkbox"] + label::before {
+                margin-right: 68%;
+            }
+            .votar input[type="checkbox"]:checked + label::before {
+                margin-right: 68%;
+            }
+
+            .votar input[type="checkbox"]:checked + label::after {
+                margin-left: -76%;
+            }
+
+        /*------ Pie de página ------*/
+        footer{
+            flex-direction: row;
+        }
+
+        footer .izquierda{
+            border-right: dotted 1.8px var(--color-texto-fondo);
+        }
+
+        footer .derecha{
+            margin-left: 2%;
+        }
+    }
+
+
+
+/*------ Pantallas desde 900px -------*/    
+@media screen and (min-width: 900px){
+    /*------ Cabecera -------*/
+        /*------ Menú -------*/
+        #menuPrincipal{
+            order: 1
+        }
+
+        /*------ Botón Contacto -------*/
+        .cta-contact{
+            order: 2;
+        }
+    /*------ Contenido -------*/
+
+        /*------ Galería -------*/
+        .galeria li{
+            width: 30%;
+        }
+
+        /*------ Input Checkbox -------*/
+        .votar input[type="checkbox"] + label::before {
+            margin-right: 70%;
+        }
+        .votar input[type="checkbox"]:checked + label::before {
+            margin-right: 70%;
+        }
+
+        .votar input[type="checkbox"]:checked + label::after {
+            margin-left: -77%;
+        }
+}
+
+
+
+/*------ Pantallas desde 1200px -------*/
+@media screen and (min-width: 1200px){
+    /*------ Contenido -------*/
+
+        /*------ Galería -------*/
+        .galeria{
+            margin: 0.5rem 3rem;
+        }
+
+        .galeria li{
+            width: 17%;
+        }
+
+        /*------ Input Checkbox -------*/
+        .votar input[type="checkbox"] + label::before {
+            margin-right: 63%;
+        }
+        .votar input[type="checkbox"]:checked + label::before {
+            margin-right: 63%;
+        }
+
+        .votar input[type="checkbox"]:checked + label::after {
+            margin-left: -73%;
+        }
+}
+
+
+
+/*------ Pantallas desde 2000px ------*/
+@media screen and (min-width: 2000px){
+    /*------ Contenido -------*/
+        main{
+            max-width: 1800px;
+        }
+
+        /*------ Galería -------*/
+        .galeria{
+            margin: 0;
+        }
+
+        .galeria li{
+        position: relative;
+        width: 15%;
+    }
+
+    /*------ Input Checkbox -------*/
+    .votar input[type="checkbox"] + label::before {
+        margin-right: 70%;
+    }
+    .votar input[type="checkbox"]:checked + label::before {
+        margin-right: 70%;
+    }
+
+    .votar input[type="checkbox"]:checked + label::after {
+        margin-left: -77%;
+    }
+}
