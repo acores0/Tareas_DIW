@@ -109,6 +109,8 @@
             <audio controls>
                 <source src="audio/cp_overture.mp3" type="audio/mp3" />
                 <source src="audio/cp_overture.ogg" type="audio/ogg" />
+                <!-- estaría bien poner la posibilidad para navegadores que no soportan html5, para que puedan usar un reproductor-->
+                <embed src="audio/cp_overture.mp3" width="250" height="50" controller="yes" autoplay="no" showcontrols="yes" autostart="no" />
                 <p><em>Para reproducir un clip de audio, su navegador debe soportar HTML5</em></p>
             </audio>
         </aside>
@@ -124,7 +126,8 @@
             <video controls poster="img/cp_photo2.png">
                 <source src="video/cp_dance.mp4" type="video/mp4" />
                 <source src="video/cp_dance.webm" type="video/webm" />
-                <track kind="captions" src="video/cp_captions.vtt" label="Captions" default />
+                <!-- ponemos el idioma del subtítulo-->
+                <track kind="captions" src="video/cp_captions.vtt" label="Captions" srclang="es" default />
                 <p><em>Para reproducir este videoclip, su navegador debe soportar HTML5.</em></p>
             </video>
         </aside>
