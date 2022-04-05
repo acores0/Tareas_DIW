@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*
+   Diseño de Interfaces Web
+   Unidad 6
+   Práctica 3
+
+   La retórica en los Estados Unidos Estilos para los medios de comunicación
+   Autor: Arancha
+   Fecha: 05/04/2022
+
+   Nombre del archivo: ws_media.css
+
+*/
+
+/* Estilos de VideoPlayer */
+video{
+   display: block;
+   width: 90%;
+   /*text-align: center;*/
+   margin: 5px auto;
+
+
+}
+
+
+
+/* Estilos de pista */
+::cue{
+   font: 1.3em sans-serif;
+   color: rgb(221, 128, 160);
+   background-color: rgba(36, 32, 32, 0.8);
+}
+
+
+
+
+@media screen and (min-width: 521px ){
+   video{
+      width: 360px;
+      float: right;
+      margin: 0 10px;
+   }
+}
