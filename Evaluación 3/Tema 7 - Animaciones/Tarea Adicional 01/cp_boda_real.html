@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--
+      Deseño de interfaces Web
+      Unidad Didáctica 6
+      Práctica 1
+
+      Página Web del Cine Penguin Royal Wedding 
+      Autor: Arancha
+      Fecha: 07/04/2022  
+
+      Fichero:   index.html
+
+   -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cinema Penguin: Royal Wedding (1951)</title>
+    <link href="css/cp_base.css" rel="stylesheet" />
+    <link href="css/cp_styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/cp_media.css">
+    <link rel="stylesheet" href="css/cp_animate.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="img/cp_logo.png" alt="Cinema Penguin" id="logoimg" />
+        <nav class="horizontal" id="topLinks">
+            <ul>
+                <li><a href="#" aria-label="Web de películas">películas</a></li>
+                <li><a href="#" aria-label="Web de actores">actores</a></li>
+                <li><a href="#" aria-label="Web de directores">directores</a></li>
+                <li><a href="#" aria-label="Web de géneros">géneros</a></li>
+                <li><a href="#" aria-label="Web de buscador">buscador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <div id="synopsis">
+                <h1>Royal Wedding - Boda real (1951)</h1>
+                <p><img src="img/cp_stars3.png" alt="3 stars" /></p>
+                <p>Tom Bowen (Fred Astaire) y Ellen Bowen (Jane Powell) son una pareja de hermanos bailarines de Nueva
+                    York.
+                    Su agente (Keenan Wynn) los reserva en Londres para actuar durante la época de la boda real. A bordo
+                    de
+                    un crucero a Londres, Ellen se involucra con el aristócrata y playboy Lord John Brindale (Peter
+                    Lawford).
+                    En Londres, Tom conoce y se enamora de Anne Ashmond (Sarah Churchill), una bailarina de su
+                    espectáculo. A
+                    pesar de algunas complicaciones menores, todo termina felizmente cuando las dos parejas encuentran
+                    el
+                    amor y el matrimonio el día de la boda real.</p>
+
+                <p><cite>Royal Wedding</cite> es famosa por varias secuencias de baile, incluido un número clásico en el
+                    que Astaire
+                    parece bailar sobre el techo y las paredes de su habitación de hotel. Jane Powell resulta ser una
+                    pareja
+                    elegante y atlética para Astaire; aunque quizás su mejor dúo de la película tiene lugar con un
+                    perchero
+                    que descubre en el crucero a Inglaterra. Esta es una de las mejores de Astaire y la recomiendo
+                    encarecidamente.</p>
+            </div>
+            <div id="cast">
+                <table>
+                    <caption>Casting</caption>
+                    <tbody>
+                        <tr>
+                            <td>Tom Bowen</td>
+                            <td><a href="#">Fred Astaire</a></td>
+                        </tr>
+                        <tr>
+                            <td>Ellen Bowen</td>
+                            <td><a href="#">Jane Powell</a></td>
+                        </tr>
+                        <tr>
+                            <td>Lord John Brindale</td>
+                            <td><a href="#">Peter Lawford</a></td>
+                        </tr>
+                        <tr>
+                            <td>Anne Ashmond</td>
+                            <td><a href="#">Sarah Churchill</a></td>
+                        </tr>
+                        <tr>
+                            <td>Irving/Edgar Klinger</td>
+                            <td><a href="#">Keenan Wynn</a></td>
+                        </tr>
+                        <tr>
+                            <td>James Ashmond</td>
+                            <td><a href="#">Albert Sharpe</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <aside>
+            <h1>La banda sonora</h1>
+            <p>La música de <cite>Royal Wedding</cite> fué compuesta por Burton Lane, conocido por su trabajo en
+                <cite>Finian's Rainbow </cite>(1947) y su obra ganadora del Grammy Award-winning <cite>On a Clear Day
+                    You Can See Forever</cite>(1965).
+            </p>
+            <p>El mayor logro musical de Lane puede ser su descubrimiento de una niña de 11 años llamada Frances Gumm, a
+                quien el mundo conoce ahora como Judy Garland.</p>
+            <p>Haga clic en el botón de reproducción de abajo para escuchar la obertura musical para la <cite>Boda Real</cite> de Burton Lane</p>
+            <audio controls>
+                <source src="audio/cp_overture.mp3" type="audio/mp3" />
+                <source src="audio/cp_overture.ogg" type="audio/ogg" />
+                <!-- estaría bien poner la posibilidad para navegadores que no soportan html5, para que puedan usar un reproductor-->
+                <embed src="audio/cp_overture.mp3" width="250" height="50" controller="yes" autoplay="no" showcontrols="yes" autostart="no" />
+                <p><em>Para reproducir un clip de audio, su navegador debe soportar HTML5</em></p>
+            </audio>
+        </aside>
+
+        <aside>
+            <h1>En el punto de mira</h1>
+            <p>El punto álgido de <cite>Boda Real</cite> es el <cite>Baile del techo</cite> en el que Astaire aparece
+                bailando sobre el techo y las paredes de su habitación de hotel. El efecto se consiguió poniendo todo el
+                decorado dentro de una jaula giratoria con una cámara fija.
+                Cuando la jaula giraba, Astaire bailaba sin problemas por los cuatro lados de la caja, creando la
+                ilusión de ingravidez.</p>
+            <p>Haga clic en el botón de reproducción para ver esta clásica secuencia.</p>
+            <input type="checkbox" id="rotarVideo">
+            <label for="rotarVideo"></label>
+            <video controls poster="img/cp_photo2.png">
+                <source src="video/cp_dance.mp4" type="video/mp4" />
+                <source src="video/cp_dance.webm" type="video/webm" />
+                <!-- ponemos el idioma del subtítulo-->
+                <track kind="captions" src="video/cp_captions.vtt" label="Captions" srclang="es" default />
+                <p><em>Para reproducir este videoclip, su navegador debe soportar HTML5.</em></p>
+            </video>
+        </aside>
+    </section>
+
+    <nav class="vertical">
+        <img src="img/cp_photo1.png" alt="" />
+        <ul>
+            <li class="lTitle">Presentación</li>
+            <li><a href="#">Página del título</a></li>
+            <li><a href="#">Sinopsis</a></li>
+            <li><a href="#">Comentarios del usuario</a></li>
+            <li><a href="#">Respuestas</a></li>
+            <li><a href="#">Citas</a></li>
+            <li><a href="#">Trivia</a></li>
+            <li><a href="#">Premios</a></li>
+            <li><a href="#">Clips de audio</a></li>
+            <li><a href="#">Clips de vídeo</a></li>
+
+            <li class="lTitle">Presentación</li>
+            <li><a href="#">Fred Astaire</a></li>
+            <li><a href="#">Jane Powell</a></li>
+            <li><a href="#">Peter Lawford</a></li>
+            <li><a href="#">Keenan Wynn</a></li>
+            <li><a href="#">Sarah Churchill</a></li>
+            <li><a href="#">Stanley Donen</a></li>
+            <li><a href="#">Alan Jay Lerner</a></li>
+
+            <li class="lTitle">Técnica</li>
+            <li><a href="#">Trailers</a></li>
+            <li><a href="#">Programa de televisión</a></li>
+            <li><a href="#">Streaming</a></li>
+            <li><a href="#">Información sobre el DVD y el Blu-Ray</a></li>
+            <li><a href="#">Especificaciones técnicas</a></li>
+            <li><a href="#">Banda sonora</a></li>
+            <li><a href="#">Guión</a></li>
+
+            <li class="lTitle">También podrías disfrutar</li>
+            <li><a href="#">El arco iris de Finian</a></li>
+            <li><a href="#">Holiday Inn</a></li>
+            <li><a href="#">Sombrero de copa</a></li>
+            <li><a href="#">Tiempo de swing</a></li>
+            <li><a href="#">Tres palabras pequeñas</a></li>
+            <li><a href="#">Roberta</a></li>
+            <li><a href="#">¿Bailamos?</a></li>
+            <li><a href="#">El divorciado gay</a></li>
+            <li><a href="#">Desfile de Pascua</a></li>
+            <li><a href="#">Cara de risa</a></li>
+            <li><a href="#">Papá Piernas Largas</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        Cinema Penguin &copy; 2018 Español (ES) <span> <a href="#">Acerca</a> <a href="#">Desarrolladores</a> <a
+            href="#">Términos</a> </span>
+    </footer>
+</body>
+
+</html>

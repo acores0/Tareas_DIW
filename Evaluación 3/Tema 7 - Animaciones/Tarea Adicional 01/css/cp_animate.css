@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/*
+   Deseño de interfaces Web
+   Unidad Didáctica 6
+   Práctica 1
+
+   Página Web del Cine Penguin Royal Wedding 
+   Autor: Arancha
+   Fecha: 07/04/2022
+
+   Fichero:   cp_animate.css
+
+*/
+
+/* Estilos de transición */
+nav#topLinks a{
+   color: rgb(255, 255, 255);
+   font-size: 1em;
+   letter-spacing: 0;
+   text-shadow: 1px -1px 1px rgba(0, 0, 0, 1);
+   
+   /*----- Transición ------*/
+   transition: color 1.5s ease-in, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6 , 0, 0.8, 0.5);
+   
+   -moz-transition: color 1.5s ease-in, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6 , 0, 0.8, 0.5);
+   -o-transition: color 1.5s ease-in, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6 , 0, 0.8, 0.5);
+   -webkit-transition: color 1.5s ease-in, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6 , 0, 0.8, 0.5);
+   -ms-transition: color 1.5s ease-in, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6 , 0, 0.8, 0.5);
+}
+
+nav#topLinks a:hover{
+   color: rgb(255, 183, 25);
+   font-size: 3em;
+   letter-spacing: 0.1em;
+   text-shadow: 15px -3px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilos de fotogramas clave */
+@keyframes spin {
+   0% {transform: rotate(0deg);}
+   23% {transform: rotate(0deg);}
+   28% {transform: rotate(90deg);}
+   39% {transform: rotate(90deg);}
+   42% {transform: rotate(180deg);}
+   68% {transform: rotate(180deg);}
+   72% {transform: rotate(270deg);}
+   90% {transform: rotate(270deg);}
+   94% {transform: rotate(360deg);}
+   100% {transform: rotate(360deg);}
+}
+
+
+
+/* Estilos de animación */
+video{
+   /*animation-name: spin;
+   animation-duration: 4s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;*/
+   animation: spin 104.04s linear infinite;
+
+   -moz-animation: spin 104.04s linear infinite;
+   -o-animation: spin 104.04s linear infinite;
+   -webkit-animation: spin 104.04s linear infinite;
+   -ms-animation: spin 104.04s linear infinite;
+}
+
+/*------ Arrancar o pausar la animación------*/
+input#rotarVideo:checked~video{
+   animation-play-state: running;
+}
+
+input#rotarVideo:not(:checked)~video{
+   animation-play-state: paused;
+}
+
+
+
+/* Estilos de iconos de animación */
+input#rotarVideo:checked+label::before{
+   content: "\270b";
+}
+
+input#rotarVideo:not(:checked)+label::after{
+   content: "\21bb";
+}
+
+
+input#rotarVideo{
+   display: none;
+}
+
+label{
+   background-color: rgb(56, 87, 119);
+   border-radius: 65px;
+   color: rgba(255, 255, 255, 0.7);
+   display: block;
+   font-size: 35px;
+   font-weight: bold;
+   line-height: 50px;
+   margin: 10px auto;
+   position: relative;
+   text-align: center;
+   width: 50px;
+   z-index: 2;
+}
+
