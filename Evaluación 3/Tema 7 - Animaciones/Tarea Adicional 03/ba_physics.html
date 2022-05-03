@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <!--
+      Diseño de interfaces Web
+      Unidad 7 - Animación
+      Práctica 3
+      
+      Animación de la física de la gran manzana
+      Autor: Arancha
+      Fecha: 27/04/2022  
+
+      Nombre del archivo: ba_physics.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <title>Física de la Gran Manzana: Conservación del Momento</title>
+   <link href="css/ba_base.css" rel="stylesheet" />
+   <link href="css/ba_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/ba_animate_txt.css">
+</head>
+
+<body>
+   <header>
+      <img src="img/ba_logo.png" alt="Física de la Gran Manzana" id="logoimg" />
+      <nav class="horizontal">
+         <ul>
+            <li><a href="#">conferencias</a></li>
+            <li><a href="#">animaciones</a></li>
+            <li><a href="#">foros</a></li>
+            <li><a href="#">búsqueda</a></li>
+         </ul>
+      </nav>
+   </header>
+   <article>
+      <h1>Conservación del impulso</h1>
+      <p>En una <a href="#">lección</a> anterior, aprendimos de
+         la 3ª Ley del Movimiento de Newton que <em>por cada acción, hay una
+         hay una reacción igual y opuesta.</em> Una consecuencia de 
+         esta ley es que si dos objetos chocan la fuerza aplicada
+         del primer objeto al segundo será igual y opuesta
+         de la fuerza aplicada desde el segundo objeto al primero.
+         El resultado es que el momento total (<var>p</var>) de todos los
+         objetos del sistema es el mismo antes y después de la
+         colisión. Este principio se conoce como 
+         <strong>Conservación del Momento</strong>.</p> <p>
+      <p>En la siguiente animación tenemos dos objetos que se acercan
+         uno al otro en curso de colisión. La bola roja de 10 kg se mueve
+         se mueve a +1m/s y la bola azul de 5kg se mueve a
+         menos;1 m/s. El momento total dentro del sistema es por tanto:</p>
+         
+      <code>
+         <var>p</var> = <var>m</var><sub>rojo</sub><var>v</var><sub>rojo</sub> 
+         + <var>m</var><sub>azul</sub><var>v</var><sub>azul</sub>
+      </code>
+      <code>
+         <var>p</var> = (10kg)(1m/s) + (5kg)(&minus;1m/s) = 5 kg&#183;m/s
+      </code>
+      
+      <p>Si la bola roja rebota con una velocidad de &minus;1 m/s, la 
+         bola azul debe rebotar con una velocidad de +3 m/s para mantener el 
+         momento del sistema en 5 kg&#183;m/s, porque: </p>
+      
+      <code>
+         <var>p</var> = (10kg)(&minus;1m/s) + (5kg)(3m/s) = 5 kg&#183;m/s
+      </code>
+      
+      <div id="animBox">
+         <img src="img/ba_redball.png" id="redBall" class="ballImg" alt="" />
+         <img src="img/ba_blueball.png" id="blueBall" class="ballImg" alt="" />
+         <div id="redSpeed1" class="animText">+1 m/s</div>
+         <div id="blueSpeed1" class="animText">&minus;1 m/s</div>
+         <div id="redSpeed2" class="animText">&minus;1 m/s</div>
+         <div id="blueSpeed2" class="animText">+3 m/s</div>
+         <div id="momentum" class="animText">Momento total: 5kg &#183; m/s</div>
+      </div>
+      
+      <p>La conservación del momento
+         supone un sistema cerrado en el que no hay otras fuerzas 
+         que interactúen con los dos objetos. Si hay una fuerza externa 
+         causará un cambio en el momento en el 
+         en todo el sistema. Por ejemplo, el momento será 
+         por la fuerza de la fricción, lo que eventualmente lleva a una completa 
+         pérdida de velocidad y momento.</p> <p>
+   </article>
+   <footer>
+      Big Apple Physics &copy; 2018 English (US) <span> <a href="#">About</a> <a href="#">Developers</a> <a href="#">Terms</a> </span>.
+   </footer>
+</body>
+</html>
+
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
