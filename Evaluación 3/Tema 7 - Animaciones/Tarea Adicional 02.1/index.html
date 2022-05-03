@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <h1 class="texto_3d animate__animated animate__bounceInDown">Formulario de Datos</h1>
+    <div class="animate__animated animate__rotateInUpLeft">
+        <figure>
+            <img src="img/Avatar Mini1.png" alt="Imagen de una avatar">
+        </figure>
+        <form action="" method="POST">
+            <div id="nome">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" class="campo" id="nombre" pattern="[A-ZÁÉÍÓÚÜÇ a-zñáéíóúç-,\s]{2,12}" required>
+            </div>
+            <div id="apelidos">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" class="campo" id="apellidos" pattern="[A-ZÁÉÍÓÚÜÇ a-zñáéíóúç-,\s]{2,34}" required>
+            </div>
+            <div id="correo">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="campo" id="email" pattern="^[a-zA-Z0-9.#$%&*_-]{2,}@[a-zA-Z0-9.#$%&*_-]{2,}(.){1}[a-zA-Z]{2,4}$" required>
+            </div>
+            <div id="tel">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" name="telefono" class="campo" id="telefono" pattern="\d{9}">
+            </div>
+            <div id="boton">
+                <input type="submit" name="guardar" id="guardar" value="Guardar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
