@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +15,18 @@
         <figure>
             <img src="img/Avatar Mini1.png" alt="Imagen de una avatar">
         </figure>
-        <form action="" method="POST">
+        <form action="" method="#">
+            <!-- al emplear gridLayoud no necesitamos poner div para agrupar los elementos-->
             <div id="nome">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" class="campo" id="nombre" pattern="[A-ZÁÉÍÓÚÜÇ a-zñáéíóúç-,\s]{2,12}" required>
+                <!-- en la expresión recular o pon el espacio o \s, la expresión regular no funciona-->
+                <!-- <input type="text" name="nombre" class="campo" id="nombre" pattern="[A-ZÁÉÍÓÚÜÇa-zñáéíóúç-,\s]{2,12}" placeholder="Nombre de pila" title="Nombre del usuario. Desde 2 a 12 caracteres." required /> -->
+                <input id="nombre" type="text" class="campo" placeholder="Nombre" title="Nombre del usuario. Desde 2 a 12 caracteres." required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,12}" />
             </div>
             <div id="apelidos">
                 <label for="apellidos">Apellidos:</label>
-                <input type="text" name="apellidos" class="campo" id="apellidos" pattern="[A-ZÁÉÍÓÚÜÇ a-zñáéíóúç-,\s]{2,34}" required>
+                <!-- <input type="text" name="apellidos" class="campo" id="apellidos" pattern="[A-ZÁÉÍÓÚÜÇ a-zñáéíóúç-,.]{2,34}" required> -->
+                <input id="apellidos" type="text" class="campo" placeholder="Apellidos" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Apellidos. De 2 a 30 caracteres." required>    
             </div>
             <div id="correo">
                 <label for="email">Email:</label>
@@ -30,7 +34,10 @@
             </div>
             <div id="tel">
                 <label for="telefono">Teléfono:</label>
-                <input type="text" name="telefono" class="campo" id="telefono" pattern="\d{9}">
+                <!-- es un telefono móvil-->
+                <!-- <input type="text" name="telefono" class="campo" id="telefono" pattern="\d{9}"> es de tipo tel no text -->
+                <input id="telefono" type="tel" class="campo" placeholder="Teléfono" pattern="^6[0-9]{8}$" title="Teléfono móvil del usuario. Campo no obligatorio" > 
+
             </div>
             <div id="boton">
                 <input type="submit" name="guardar" id="guardar" value="Guardar">
