@@ -1,0 +1,422 @@
+@import url(iconos.css);
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+
+/*---------- Estilos generales ----------*/
+:root{
+    --color-fondo: #000;
+    --color-texto: #fff;
+    --color-secundario: #ff0000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*------ Tamaño y color del scroll Firefox-------*/
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secundario) var(--color-texto);
+}
+
+/*---------- Tamaño y color del scroll Chrome, opera, edge------*/
+    ::-webkit-scrollbar{
+        width: 0.5rem;
+    }
+
+    /*----- Color del scroll ------*/
+    ::-webkit-scrollbar-thumb{
+        background-color: var(--color-secundario);
+    }
+
+    /*----- Color de fondo de la barra de scroll ------*/
+    ::-webkit-scrollbar-track{
+        background-color: var(--color-texto);
+    }
+
+    /*https://www.youtube.com/watch?v=lvKK2fs6h4I*/
+
+body{ 
+    height: auto;
+    min-height: 100vh;
+
+    font-size: 20px;
+    font-family: 'Macondo', cursive;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+ 
+
+
+
+/*---------- Cabecera ----------*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header figure{
+    width: 10%;
+}
+
+header figure img{
+    width: 100%;
+}
+
+    /*----- Menú Principal ------*/
+    #menuPrincipal{
+        width: 90%;
+    }
+
+    #menuPrincipal ul{
+        list-style: none;
+    }
+
+    #menuPrincipal ul div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #menuPrincipal ul a{
+        text-decoration: none;
+        color: var(--color-texto);
+    }
+
+    #menuPrincipal ul a, .icon{
+        transition: color 0.5s ease-in-out, font-size 0.5s ease;
+
+        -moz-transition: color 0.5s ease-in-out, font-size 0.5s ease;
+        -o-transition: color 0.5s ease-in-out, font-size 0.5s ease;
+        -webkit-transition: color 0.5s ease-in-out, font-size 0.5s ease;
+        -ms-transition: color 0.5s ease-in-out, font-size 0.5s ease;
+    }
+
+    #menuPrincipal ul a:hover{
+        color: var(--color-secundario);
+        font-size: 1.5rem;
+    }
+    
+    #menuPrincipal ul li:nth-child(6) a:hover{
+        transition: none;
+
+        -moz-transition: none;
+        -o-transition: none;
+        -webkit-transition: none;
+        -ms-transition: none;
+    }
+
+    #menuPrincipal ul li:nth-child(6) a:hover{
+        color: var(--color-texto);
+        cursor: auto;
+        font-size: 20px;
+    }
+
+    /*-------- Iconos -------*/
+    .icon-search:hover, .icon-bell-o:hover, .icon-user-circle-o:hover{
+        cursor: pointer;
+        color: var(--color-secundario);
+        font-size: 1.5rem;
+    }
+
+    /*---------- Menú desplegable ----------*/
+    #menuPrincipal img{
+        display: none;
+    }
+
+
+/*---------- Contenido -------------*/
+main{
+    margin-top: 1rem;
+}
+
+
+
+
+
+/*---------- Slider ----------*/
+#slider{
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider label{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+}
+
+#contenedor-slider{
+    display: flex;
+    width: 400%;
+    animation: slider 25s infinite alternate linear;
+    margin-bottom: 3rem;
+}
+
+#contenedor-slider div{
+    width: 100%;
+    text-align: center;
+}
+
+#contenedor-slider div iframe{
+    width: 50%;
+    height: 70vh;
+}
+
+@keyframes slider {
+    0%{
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: -100%;
+    }
+
+    50%{
+        margin-left: -100%;
+    }
+
+    55% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -200%;
+    }
+
+    80% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+
+/*--------- Pausar / arrancar video -----------*/
+input#pausarVideo{
+    display: none;
+}
+
+input#pausarVideo:checked~#contenedor-slider{
+    animation-play-state: running;
+}
+
+input#pausarVideo:not(:checked)~#contenedor-slider{
+    animation-play-state: paused;
+}
+
+input#pausarVideo:checked+label::after{
+    content: "\270b";
+}
+
+input#pausarVideo:not(:checked)+label::after{
+    content: "\21bb";
+}
+
+label{
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center;
+    width: 50px;
+}
+
+
+
+/*----------- Galería -> Grid Layout ----------*/
+section{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+section article{
+    margin-bottom: 2rem;
+}
+
+section h2{
+    margin-bottom: 0.5rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+    grid-gap: 1%;
+}
+
+.grid div{
+    width: 100%;
+}
+
+.grid div img{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.grid div img:hover{
+    border: solid 3px var(--color-secundario);
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+/*----------- Diseño responsive -----------*/
+@media screen and (max-width: 550px) {
+    /*---------- Cabecera ----------*/
+        header figure{
+            width: 20%;
+        }
+
+
+        /*---------- Menú ----------*/
+            #menuPrincipal{
+                width: 80%;
+                text-align: right;
+            } 
+            
+            #menuPrincipal img:hover{
+                cursor: pointer;
+            }
+
+            #menuPrincipal #abrirMenu{
+                display: inline-block;
+                width: 10%;
+            }
+
+           
+            #menuPrincipal ul{
+                width: 100%;
+                height: 100vh;
+                background-color: var(--color-secundario);
+                opacity: 0.9;
+                
+                margin-left: -100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                transition: margin 1.5s linear;
+
+                -moz-transition: all 1.5s linear;
+                -o-transition: all 1.5s linear;
+                -webkit-transition: all 1.5s linear;
+                -ms-transition: all 1.5s linear;
+            } 
+
+            #menuPrincipal ul.transicionUl{
+                margin-left: 0;
+            }
+
+            #menuPrincipal ul div{
+                width: 100%;
+                position: absolute;
+                top: 3%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #menuPrincipal ul div li{
+                margin-bottom: 2rem;
+            }
+
+            #menuPrincipal ul div li a {
+                font-size: 25px;
+                transition: all 0.1s ease-in-out;
+                
+                -moz-transition: all 0.1s ease-in-out;
+                -o-transition: all 0.1s ease-in-out;
+                -webkit-transition: all 0.1s ease-in-out;
+                -ms-transition: all 0.1s ease-in-out;
+
+            }  
+            
+            #menuPrincipal ul li:nth-child(6) a{
+                font-size: 20px;
+            }
+
+            .icon-search, .icon-bell-o, .icon-user-circle-o{   
+                font-size: 30px;
+            }
+            #menuPrincipal ul li:nth-child(6) a, .icon-search, .icon-bell-o, .icon-user-circle-o{
+                transition: none;
+
+                -moz-transition: none;
+                -o-transition: none;
+                -webkit-transition: none;
+                -ms-transition: none;
+            }    
+        
+
+            #menuPrincipal ul a:hover, .icon-search:hover, .icon-bell-o:hover, .icon-user-circle-o:hover{
+                font-size: 35px;
+                color: #ffff00;
+            }
+
+           
+
+           
+            
+            #menuPrincipal ul figure{
+                position: absolute;
+                top: 2.65%;
+                left: 77.5%;
+            }
+
+            #menuPrincipal ul #cerrarMenu{
+                display: none;
+                width: 40%;
+            }
+
+
+
+
+    /*---------- Contenido ----------*/
+        /*--------- Slider ----------*/
+        #contenedor-slider div iframe{
+            width: 60%;
+            height: 40vh;
+        }
+
+        #slider label{
+            top: 50%;
+        }
+
+        
+    section article{
+        padding-bottom: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    section h2{
+        text-align: center;
+    }
+
+    /*------------- Galería -------------*/
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+}
